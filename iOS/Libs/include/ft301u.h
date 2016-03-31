@@ -15,7 +15,7 @@ extern "C"
 #endif
     LONG SCARD_CTL_CODE(unsigned int code);
     /*
-    Function: FtGetDeviceHID
+    Function: FtGetSerialNum
  
     Parameters:
     hContext 		IN 		Connection context to the PC/SC Resource Manager
@@ -25,7 +25,7 @@ extern "C"
     Description:
     This function userd to get serial number of iR301.
     */
-    LONG FtGetDeviceHID(SCARDCONTEXT hContext, unsigned int * length,char * buffer);
+    LONG FtGetSerialNum(SCARDCONTEXT hContext, unsigned int * length,char * buffer);
     
     
     /*
@@ -57,7 +57,7 @@ extern "C"
     
     
     /*
-     Function: FtEscapeDeviceUID
+     Function: FtEraseDeviceUID
      
      Parameters:
      hContext 			IN 		Connection context to the PC/SC Resource Manager
@@ -67,7 +67,7 @@ extern "C"
      Description:
      This function used to Escape Device UID
      */
-    LONG FtEscapeDeviceUID(SCARDCONTEXT hContext,unsigned int seedLength ,unsigned char *seedBuffer);
+    LONG FtEraseDeviceUID(SCARDCONTEXT hContext,unsigned int seedLength ,unsigned char *seedBuffer);
     
     
     /*
