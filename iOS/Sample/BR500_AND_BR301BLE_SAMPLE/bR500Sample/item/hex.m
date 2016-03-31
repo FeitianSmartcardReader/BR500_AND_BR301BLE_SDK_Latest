@@ -11,9 +11,9 @@
 @implementation hex
 
 /**
- *  NSString转16进制形式
+ *  NSString to HEX
  *
- *  @param cmd 源数据
+ *  @param cmd source data
  *
  *  @return
  */
@@ -49,11 +49,11 @@
 }
 
 /**
- *  字符串转十六进制形式
+ *  string to hex
  *
- *  @param pbDest 输出缓冲区
- *  @param szSrc  输入缓冲区
- *  @param dwLen  输入缓冲区长度
+ *  @param pbDest output buffer
+ *  @param szSrc  input buffer
+ *  @param dwLen  length of input buffer
  */
 void StrToHex(unsigned char *pbDest, char *szSrc, unsigned int dwLen)
 {
@@ -78,10 +78,10 @@ void StrToHex(unsigned char *pbDest, char *szSrc, unsigned int dwLen)
 }
 
 /**
- *  过滤字符串函数（0~9 a~f A~F）
+ *  Filter string functions（0~9 a~f A~F）
  *
- *  @param szSrc 字符串
- *  @param dwLen 字符串长度
+ *  @param szSrc string
+ *  @param dwLen string length
  *
  *  @return
  */

@@ -261,7 +261,7 @@ NSString *identifier = @"commandListView";
 /**
  *  Write UID
  *
- *  @param sender <#sender description#>
+ *  @param sender 
  */
 -(IBAction)writeReaderUID:(id)sender
 {

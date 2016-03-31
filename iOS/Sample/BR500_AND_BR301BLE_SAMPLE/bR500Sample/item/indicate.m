@@ -21,9 +21,9 @@
 
 -(void)addIndicateView
 {
-    UIActivityIndicatorView *v  = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];//指定进度轮的大小
-    [v setCenter:CGPointMake(self.center.x, self.center.y)];//指定进度轮中心点
-    [v setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];//设置进度轮显示类型
+    UIActivityIndicatorView *v  = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
+    [v setCenter:CGPointMake(self.center.x, self.center.y)];
+    [v setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
     [self  addSubview:v];
     [v startAnimating];
 }
