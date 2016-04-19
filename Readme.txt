@@ -1,3 +1,5 @@
+2016/4/20
+	Rearrange BR500 and BR301BLE SDK
 2016/3/9
 	Publish 1.1 version which update iOS and Android SDK
 	Update user manual, add bR301BLE into support list, they are using same tool and SDK

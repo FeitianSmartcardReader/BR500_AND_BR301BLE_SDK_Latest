@@ -3,8 +3,20 @@
  * @This isfeitian's private cmd.
  */
 
-#ifndef __ft301u_h__
-#define __ft301u_h__
+
+/**
+ * Copyright(C) Feitian Technologies Co., Ltd. All rights reserved.
+ * FileName:        FtBleReader.h
+ * FileIdentify:    FtBleReader.h
+ * Description:     FT private method
+ * Version:         3.4.9
+ * Created by:      shanshan
+ * FinishDate:      2016-04-18
+ * Revision1:
+ **/
+
+#ifndef __FtBleReader_h__
+#define __FtBleReader_h__
 
 
 #include "wintypes.h"
