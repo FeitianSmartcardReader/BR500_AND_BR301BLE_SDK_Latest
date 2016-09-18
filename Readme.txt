@@ -1,3 +1,5 @@
+2016/9/18
+	Update docs
 2016/4/20
 	Rearrange BR500 and BR301BLE SDK
 2016/3/9
