@@ -3,13 +3,11 @@
 package com.example.ftbtdemo;
 
 
-import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
 
 public class BlueToothReceiver extends BroadcastReceiver

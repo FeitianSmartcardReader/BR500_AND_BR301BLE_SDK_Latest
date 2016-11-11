@@ -80,7 +80,7 @@
 
             <Button
                 android:id="@+id/BGetStatus"
-                android:layout_width="175dp"
+                android:layout_width="125dp"
                 android:layout_height="wrap_content"
                 android:text="GetStat"
                 android:textSize="20dip" />

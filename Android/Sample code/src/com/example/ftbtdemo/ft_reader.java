@@ -2,17 +2,17 @@ package com.example.ftbtdemo;
 
 import android.content.Context;
 import android.os.Handler;
-import com.feitian.reader.devicecontrol.Card;
-import com.feitian.readerdk.Tool.DK;
+import com.feitianBLE.reader.devicecontrol.BleCard;
+import com.feitianBLE.readerdk.Tool.DK;
 
 public class ft_reader {
 	private boolean isPowerOn = false;
-	private Card inner_card;
+	private BleCard inner_card;
 
 	Handler mHandler;
 
 	public ft_reader(String address, Context c) throws Exception {
-		inner_card = new Card(address, c);
+		inner_card = new BleCard(address, c);
 	}
 
 	public boolean isPowerOn() {
@@ -106,6 +106,13 @@ public class ft_reader {
 		} else {
 			throw new FtBlueReadException("trans apdu error");
 		}
+	}
+	
+	public int getProtocol() throws FtBlueReadException{
+		if(isPowerOn == false){
+			throw new FtBlueReadException("Power Off already");
+		}
+		return inner_card.getProtocol();
 	}
 
 	public void readerClose() {

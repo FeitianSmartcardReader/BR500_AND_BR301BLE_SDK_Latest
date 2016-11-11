@@ -1,3 +1,5 @@
+2016/11/11
+	Update Android SDK
 2016/9/18
 	Update docs
 2016/4/20
