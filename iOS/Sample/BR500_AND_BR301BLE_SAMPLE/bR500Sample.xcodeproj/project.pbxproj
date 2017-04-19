@@ -30,8 +30,7 @@
 		33A429821C8FE9A2000463CC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A4297F1C8FE9A2000463CC /* Default@2x.png */; };
 		33EB72691C50E0A300255790 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB72661C50E0A300255790 /* hex.m */; };
 		33EB726A1C50E0A300255790 /* indicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB72681C50E0A300255790 /* indicate.m */; };
-		B52DE36A1CAD4F6C0014B01E /* BR301BLE_AND_BR500_DEBUG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52DE3681CAD4F6C0014B01E /* BR301BLE_AND_BR500_DEBUG.a */; };
-		B52DE36B1CAD4F6C0014B01E /* BR301BLE_AND_BR500_RELEASE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B52DE3691CAD4F6C0014B01E /* BR301BLE_AND_BR500_RELEASE.a */; };
+		B5C9D21A1E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +89,7 @@
 		B52DE3641CAD4F6C0014B01E /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
 		B52DE3651CAD4F6C0014B01E /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
 		B52DE3661CAD4F6C0014B01E /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
-		B52DE3681CAD4F6C0014B01E /* BR301BLE_AND_BR500_DEBUG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = BR301BLE_AND_BR500_DEBUG.a; sourceTree = "<group>"; };
-		B52DE3691CAD4F6C0014B01E /* BR301BLE_AND_BR500_RELEASE.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = BR301BLE_AND_BR500_RELEASE.a; sourceTree = "<group>"; };
+		B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBR500_AND_BR301BLE_V3.4.9_DEBUG.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B52DE36B1CAD4F6C0014B01E /* BR301BLE_AND_BR500_RELEASE.a in Frameworks */,
-				B52DE36A1CAD4F6C0014B01E /* BR301BLE_AND_BR500_DEBUG.a in Frameworks */,
+				B5C9D21A1E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a in Frameworks */,
 				336358D41C4F735E0029B123 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,8 +240,7 @@
 		B52DE3671CAD4F6C0014B01E /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B52DE3681CAD4F6C0014B01E /* BR301BLE_AND_BR500_DEBUG.a */,
-				B52DE3691CAD4F6C0014B01E /* BR301BLE_AND_BR500_RELEASE.a */,
+				B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -316,6 +312,7 @@
 				TargetAttributes = {
 					3363588D1C4F6D0C0029B123 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = PL9NCP8CG6;
 					};
 					336358A61C4F6D0D0029B123 = {
 						CreatedOnToolsVersion = 7.1;
@@ -535,15 +532,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PL9NCP8CG6;
 				INFOPLIST_FILE = bR500Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../libs/SDK/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Libs/lib/\"";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500Sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -554,15 +549,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PL9NCP8CG6;
 				INFOPLIST_FILE = bR500Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../libs/SDK/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Libs/lib/\"";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500Sample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

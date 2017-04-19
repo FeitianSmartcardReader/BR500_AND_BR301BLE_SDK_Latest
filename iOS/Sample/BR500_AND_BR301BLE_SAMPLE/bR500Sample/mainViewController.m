@@ -38,11 +38,11 @@ NSString *identifier = @"commandListView";
 }
 
 /**
- *  初始化tableview
+ *  init tableview
  */
 -(void)createCommandTableView
 {
-    //1.初始化UI
+    //init UI
     [_commandListView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
     commandList = [[NSArray alloc] initWithObjects:@"0084000008",@"0084000004", nil];
 }
