@@ -1,3 +1,9 @@
+2017/8/14
+	Update iOS SDK
+2017/7/28
+	Update User Manual
+2017/4/19
+	Update User Manual
 2016/11/11
 	Update Android SDK
 2016/9/18
