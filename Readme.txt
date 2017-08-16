@@ -1,9 +1,6 @@
-2017/8/14
-	Update iOS SDK
-2017/7/28
-	Update User Manual
-2017/4/19
-	Update User Manual
+2017/8/16
+	Update iOS SDK, add a parameter in connectPeripheralReader API allow user to set timeout, because sometimes, if user take iOS device out of the range, then the connection will lost and set a timeout can be easily control by user. 
+2017/8/14	Update iOS SDK, solve a issue with read 262 bytes bug with Feitian internal test card2017/7/28	Update User Manual2017/4/19	Update User Manual
 2016/11/11
 	Update Android SDK
 2016/9/18

@@ -151,8 +151,12 @@ SCARDCONTEXT gContxtHandle;
 {
     [self createIndicateView];
     _selectReaderName =  _deviceListArray[indexPath.row];
-    [_readerInfo connectPeripheralReader:_deviceListArray[indexPath.row]];
-    
+	BOOL flag = [_readerInfo connectPeripheralReader:_deviceListArray[indexPath.row] timeout:5];
+    if(flag == NO){
+        
+        NSLog(@"connect fail");
+        [self hidIndicateView];
+    }
 }
 
 #pragma mark - stroyboard

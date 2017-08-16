@@ -18,7 +18,9 @@
 }
 @end
 
-#define SoftVersion @"1.9.5"
+//1.9.6 - Modify connectPeripheralReader API and change demo code, set timeout t0 5s
+
+#define SoftVersion @"1.9.6"
 NSString *identifier = @"commandListView";
 
 @implementation mainViewController

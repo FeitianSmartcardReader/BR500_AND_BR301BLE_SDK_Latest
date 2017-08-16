@@ -12,8 +12,8 @@
 		3363589C1C4F6D0C0029B123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3363589A1C4F6D0C0029B123 /* Main.storyboard */; };
 		3363589E1C4F6D0C0029B123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3363589D1C4F6D0C0029B123 /* Assets.xcassets */; };
 		336358A11C4F6D0C0029B123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3363589F1C4F6D0C0029B123 /* LaunchScreen.storyboard */; };
-		336358AC1C4F6D0D0029B123 /* bR500_and_bR301BLETests.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358AB1C4F6D0D0029B123 /* bR500_and_bR301BLETests.m */; };
-		336358B71C4F6D0D0029B123 /* bR500_and_bR301BLEUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358B61C4F6D0D0029B123 /* bR500_and_bR301BLEUITests.m */; };
+		336358AC1C4F6D0D0029B123 /* bR500SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358AB1C4F6D0D0029B123 /* bR500SampleTests.m */; };
+		336358B71C4F6D0D0029B123 /* bR500SampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358B61C4F6D0D0029B123 /* bR500SampleUITests.m */; };
 		336358D21C4F70DB0029B123 /* scanDeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358D11C4F70DB0029B123 /* scanDeviceTableViewController.m */; };
 		336358D41C4F735E0029B123 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336358D31C4F735E0029B123 /* CoreBluetooth.framework */; };
 		336358E01C4F7C3D0029B123 /* mainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 336358DF1C4F7C3D0029B123 /* mainViewController.m */; };
@@ -30,8 +30,7 @@
 		33A429821C8FE9A2000463CC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33A4297F1C8FE9A2000463CC /* Default@2x.png */; };
 		33EB72691C50E0A300255790 /* hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB72661C50E0A300255790 /* hex.m */; };
 		33EB726A1C50E0A300255790 /* indicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EB72681C50E0A300255790 /* indicate.m */; };
-		33F56C191CB78C7400BFAC4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33F56C1B1CB78C7400BFAC4C /* Localizable.strings */; };
-		B5FB85351F31D2120045FA11 /* libBR500_AND_BR301BLE_V3.5.1_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5FB85331F31D2120045FA11 /* libBR500_AND_BR301BLE_V3.5.1_debug.a */; };
+		B5C9D21A1E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3363588E1C4F6D0C0029B123 /* bR500_and_bR301BLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bR500_and_bR301BLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3363588E1C4F6D0C0029B123 /* bR500Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bR500Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		336358921C4F6D0C0029B123 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		336358941C4F6D0C0029B123 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		336358951C4F6D0C0029B123 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,11 +59,11 @@
 		3363589D1C4F6D0C0029B123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		336358A01C4F6D0C0029B123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		336358A21C4F6D0C0029B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		336358A71C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bR500_and_bR301BLE.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		336358AB1C4F6D0D0029B123 /* bR500_and_bR301BLETests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bR500_and_bR301BLETests.m; sourceTree = "<group>"; };
+		336358A71C4F6D0D0029B123 /* bR500SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bR500SampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336358AB1C4F6D0D0029B123 /* bR500SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bR500SampleTests.m; sourceTree = "<group>"; };
 		336358AD1C4F6D0D0029B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		336358B21C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bR500_and_bR301BLE.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		336358B61C4F6D0D0029B123 /* bR500_and_bR301BLEUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bR500_and_bR301BLEUITests.m; sourceTree = "<group>"; };
+		336358B21C4F6D0D0029B123 /* bR500SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bR500SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		336358B61C4F6D0D0029B123 /* bR500SampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bR500SampleUITests.m; sourceTree = "<group>"; };
 		336358B81C4F6D0D0029B123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		336358D01C4F70DB0029B123 /* scanDeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanDeviceTableViewController.h; sourceTree = "<group>"; };
 		336358D11C4F70DB0029B123 /* scanDeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scanDeviceTableViewController.m; sourceTree = "<group>"; };
@@ -86,14 +85,11 @@
 		33EB72661C50E0A300255790 /* hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hex.m; sourceTree = "<group>"; };
 		33EB72671C50E0A300255790 /* indicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = indicate.h; sourceTree = "<group>"; };
 		33EB72681C50E0A300255790 /* indicate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = indicate.m; sourceTree = "<group>"; };
-		33F56C1C1CB78C7800BFAC4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		33F56C1D1CB78C7900BFAC4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		B5FB852D1F31D2120045FA11 /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
-		B5FB852E1F31D2120045FA11 /* FtBleReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FtBleReader.h; sourceTree = "<group>"; };
-		B5FB852F1F31D2120045FA11 /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
-		B5FB85301F31D2120045FA11 /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
-		B5FB85311F31D2120045FA11 /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
-		B5FB85331F31D2120045FA11 /* libBR500_AND_BR301BLE_V3.5.1_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBR500_AND_BR301BLE_V3.5.1_debug.a; sourceTree = "<group>"; };
+		B52DE3631CAD4F6C0014B01E /* ft301u.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ft301u.h; sourceTree = "<group>"; };
+		B52DE3641CAD4F6C0014B01E /* ReaderInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderInterface.h; sourceTree = "<group>"; };
+		B52DE3651CAD4F6C0014B01E /* winscard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = winscard.h; sourceTree = "<group>"; };
+		B52DE3661CAD4F6C0014B01E /* wintypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wintypes.h; sourceTree = "<group>"; };
+		B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBR500_AND_BR301BLE_V3.4.9_DEBUG.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5FB85351F31D2120045FA11 /* libBR500_AND_BR301BLE_V3.5.1_debug.a in Frameworks */,
+				B5C9D21A1E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a in Frameworks */,
 				336358D41C4F735E0029B123 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,11 +122,11 @@
 		336358851C4F6D0C0029B123 = {
 			isa = PBXGroup;
 			children = (
+				B52DE3611CAD4F6C0014B01E /* Libs */,
 				336358D31C4F735E0029B123 /* CoreBluetooth.framework */,
-				B5FB852B1F31D2120045FA11 /* Libs */,
-				336358901C4F6D0C0029B123 /* bR500_and_bR301BLE */,
-				336358AA1C4F6D0D0029B123 /* bR500_and_bR301BLETests */,
-				336358B51C4F6D0D0029B123 /* bR500_and_bR301BLEUITests */,
+				336358901C4F6D0C0029B123 /* bR500Sample */,
+				336358AA1C4F6D0D0029B123 /* bR500SampleTests */,
+				336358B51C4F6D0D0029B123 /* bR500SampleUITests */,
 				3363588F1C4F6D0C0029B123 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,14 +134,14 @@
 		3363588F1C4F6D0C0029B123 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3363588E1C4F6D0C0029B123 /* bR500_and_bR301BLE.app */,
-				336358A71C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */,
-				336358B21C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */,
+				3363588E1C4F6D0C0029B123 /* bR500Sample.app */,
+				336358A71C4F6D0D0029B123 /* bR500SampleTests.xctest */,
+				336358B21C4F6D0D0029B123 /* bR500SampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		336358901C4F6D0C0029B123 /* bR500_and_bR301BLE */ = {
+		336358901C4F6D0C0029B123 /* bR500Sample */ = {
 			isa = PBXGroup;
 			children = (
 				33EB72641C50E0A300255790 /* item */,
@@ -161,7 +157,7 @@
 				336358A21C4F6D0C0029B123 /* Info.plist */,
 				336358911C4F6D0C0029B123 /* Supporting Files */,
 			);
-			path = bR500_and_bR301BLE;
+			path = bR500Sample;
 			sourceTree = "<group>";
 		};
 		336358911C4F6D0C0029B123 /* Supporting Files */ = {
@@ -169,27 +165,26 @@
 			children = (
 				336358E41C4F9ECA0029B123 /* pic */,
 				336358921C4F6D0C0029B123 /* main.m */,
-				33F56C1B1CB78C7400BFAC4C /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		336358AA1C4F6D0D0029B123 /* bR500_and_bR301BLETests */ = {
+		336358AA1C4F6D0D0029B123 /* bR500SampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				336358AB1C4F6D0D0029B123 /* bR500_and_bR301BLETests.m */,
+				336358AB1C4F6D0D0029B123 /* bR500SampleTests.m */,
 				336358AD1C4F6D0D0029B123 /* Info.plist */,
 			);
-			path = bR500_and_bR301BLETests;
+			path = bR500SampleTests;
 			sourceTree = "<group>";
 		};
-		336358B51C4F6D0D0029B123 /* bR500_and_bR301BLEUITests */ = {
+		336358B51C4F6D0D0029B123 /* bR500SampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				336358B61C4F6D0D0029B123 /* bR500_and_bR301BLEUITests.m */,
+				336358B61C4F6D0D0029B123 /* bR500SampleUITests.m */,
 				336358B81C4F6D0D0029B123 /* Info.plist */,
 			);
-			path = bR500_and_bR301BLEUITests;
+			path = bR500SampleUITests;
 			sourceTree = "<group>";
 		};
 		336358E41C4F9ECA0029B123 /* pic */ = {
@@ -221,32 +216,31 @@
 			path = item;
 			sourceTree = "<group>";
 		};
-		B5FB852B1F31D2120045FA11 /* Libs */ = {
+		B52DE3611CAD4F6C0014B01E /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				B5FB852C1F31D2120045FA11 /* include */,
-				B5FB85321F31D2120045FA11 /* lib */,
+				B52DE3621CAD4F6C0014B01E /* include */,
+				B52DE3671CAD4F6C0014B01E /* lib */,
 			);
 			name = Libs;
 			path = ../../Libs;
 			sourceTree = "<group>";
 		};
-		B5FB852C1F31D2120045FA11 /* include */ = {
+		B52DE3621CAD4F6C0014B01E /* include */ = {
 			isa = PBXGroup;
 			children = (
-				B5FB852D1F31D2120045FA11 /* ft301u.h */,
-				B5FB852E1F31D2120045FA11 /* FtBleReader.h */,
-				B5FB852F1F31D2120045FA11 /* ReaderInterface.h */,
-				B5FB85301F31D2120045FA11 /* winscard.h */,
-				B5FB85311F31D2120045FA11 /* wintypes.h */,
+				B52DE3631CAD4F6C0014B01E /* ft301u.h */,
+				B52DE3641CAD4F6C0014B01E /* ReaderInterface.h */,
+				B52DE3651CAD4F6C0014B01E /* winscard.h */,
+				B52DE3661CAD4F6C0014B01E /* wintypes.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		B5FB85321F31D2120045FA11 /* lib */ = {
+		B52DE3671CAD4F6C0014B01E /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				B5FB85331F31D2120045FA11 /* libBR500_AND_BR301BLE_V3.5.1_debug.a */,
+				B5C9D2191E0A61BB007E5D06 /* libBR500_AND_BR301BLE_V3.4.9_DEBUG.a */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -254,9 +248,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3363588D1C4F6D0C0029B123 /* bR500_and_bR301BLE */ = {
+		3363588D1C4F6D0C0029B123 /* bR500Sample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 336358BB1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLE" */;
+			buildConfigurationList = 336358BB1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500Sample" */;
 			buildPhases = (
 				3363588A1C4F6D0C0029B123 /* Sources */,
 				3363588B1C4F6D0C0029B123 /* Frameworks */,
@@ -266,14 +260,14 @@
 			);
 			dependencies = (
 			);
-			name = bR500_and_bR301BLE;
+			name = bR500Sample;
 			productName = bR500Sample;
-			productReference = 3363588E1C4F6D0C0029B123 /* bR500_and_bR301BLE.app */;
+			productReference = 3363588E1C4F6D0C0029B123 /* bR500Sample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		336358A61C4F6D0D0029B123 /* bR500_and_bR301BLETests */ = {
+		336358A61C4F6D0D0029B123 /* bR500SampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 336358BE1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLETests" */;
+			buildConfigurationList = 336358BE1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500SampleTests" */;
 			buildPhases = (
 				336358A31C4F6D0D0029B123 /* Sources */,
 				336358A41C4F6D0D0029B123 /* Frameworks */,
@@ -284,14 +278,14 @@
 			dependencies = (
 				336358A91C4F6D0D0029B123 /* PBXTargetDependency */,
 			);
-			name = bR500_and_bR301BLETests;
+			name = bR500SampleTests;
 			productName = bR500SampleTests;
-			productReference = 336358A71C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */;
+			productReference = 336358A71C4F6D0D0029B123 /* bR500SampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		336358B11C4F6D0D0029B123 /* bR500_and_bR301BLEUITests */ = {
+		336358B11C4F6D0D0029B123 /* bR500SampleUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 336358C11C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLEUITests" */;
+			buildConfigurationList = 336358C11C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500SampleUITests" */;
 			buildPhases = (
 				336358AE1C4F6D0D0029B123 /* Sources */,
 				336358AF1C4F6D0D0029B123 /* Frameworks */,
@@ -302,9 +296,9 @@
 			dependencies = (
 				336358B41C4F6D0D0029B123 /* PBXTargetDependency */,
 			);
-			name = bR500_and_bR301BLEUITests;
+			name = bR500SampleUITests;
 			productName = bR500SampleUITests;
-			productReference = 336358B21C4F6D0D0029B123 /* bR500_and_bR301BLE.xctest */;
+			productReference = 336358B21C4F6D0D0029B123 /* bR500SampleUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -314,12 +308,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = "(C)2016-2020 Feitian Technologies Co. ,Ltd";
+				ORGANIZATIONNAME = ftsafe;
 				TargetAttributes = {
 					3363588D1C4F6D0C0029B123 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = PL9NCP8CG6;
-						ProvisioningStyle = Manual;
 					};
 					336358A61C4F6D0D0029B123 = {
 						CreatedOnToolsVersion = 7.1;
@@ -331,23 +324,22 @@
 					};
 				};
 			};
-			buildConfigurationList = 336358891C4F6D0C0029B123 /* Build configuration list for PBXProject "bR500_and_bR301BLE" */;
+			buildConfigurationList = 336358891C4F6D0C0029B123 /* Build configuration list for PBXProject "bR500Sample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
-				"zh-Hans",
 			);
 			mainGroup = 336358851C4F6D0C0029B123;
 			productRefGroup = 3363588F1C4F6D0C0029B123 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3363588D1C4F6D0C0029B123 /* bR500_and_bR301BLE */,
-				336358A61C4F6D0D0029B123 /* bR500_and_bR301BLETests */,
-				336358B11C4F6D0D0029B123 /* bR500_and_bR301BLEUITests */,
+				3363588D1C4F6D0C0029B123 /* bR500Sample */,
+				336358A61C4F6D0D0029B123 /* bR500SampleTests */,
+				336358B11C4F6D0D0029B123 /* bR500SampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,7 +359,6 @@
 				33A429811C8FE9A2000463CC /* Default.png in Resources */,
 				336358EE1C4F9ECA0029B123 /* OFF.png in Resources */,
 				336358F21C4F9ECA0029B123 /* SEND_ON.png in Resources */,
-				33F56C191CB78C7400BFAC4C /* Localizable.strings in Resources */,
 				336358EC1C4F9ECA0029B123 /* DROPLIST_OFF.png in Resources */,
 				336358F01C4F9ECA0029B123 /* ON.png in Resources */,
 				33A429821C8FE9A2000463CC /* Default@2x.png in Resources */,
@@ -409,7 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				336358AC1C4F6D0D0029B123 /* bR500_and_bR301BLETests.m in Sources */,
+				336358AC1C4F6D0D0029B123 /* bR500SampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				336358B71C4F6D0D0029B123 /* bR500_and_bR301BLEUITests.m in Sources */,
+				336358B71C4F6D0D0029B123 /* bR500SampleUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,12 +417,12 @@
 /* Begin PBXTargetDependency section */
 		336358A91C4F6D0D0029B123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3363588D1C4F6D0C0029B123 /* bR500_and_bR301BLE */;
+			target = 3363588D1C4F6D0C0029B123 /* bR500Sample */;
 			targetProxy = 336358A81C4F6D0D0029B123 /* PBXContainerItemProxy */;
 		};
 		336358B41C4F6D0D0029B123 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3363588D1C4F6D0C0029B123 /* bR500_and_bR301BLE */;
+			target = 3363588D1C4F6D0C0029B123 /* bR500Sample */;
 			targetProxy = 336358B31C4F6D0D0029B123 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -451,15 +442,6 @@
 				336358A01C4F6D0C0029B123 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		33F56C1B1CB78C7400BFAC4C /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33F56C1C1CB78C7800BFAC4C /* en */,
-				33F56C1D1CB78C7900BFAC4C /* zh-Hans */,
-			);
-			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -549,16 +531,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/bR500_and_bR301BLE/Info.plist";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = PL9NCP8CG6;
+				INFOPLIST_FILE = bR500Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Libs/lib/\"";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iR301.demo.1;
-				PRODUCT_NAME = bR500_and_bR301BLE;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -567,18 +548,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = PL9NCP8CG6;
-				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "$(SRCROOT)/bR500_and_bR301BLE/Info.plist";
+				INFOPLIST_FILE = bR500Sample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/../../Libs/lib/\"";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.iR301.demo.1;
-				PRODUCT_NAME = bR500_and_bR301BLE;
-				PROVISIONING_PROFILE = "cbfbde58-8400-4ade-a155-9b9aeb682a10";
-				PROVISIONING_PROFILE_SPECIFIER = FT_IN_HOUSE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -590,8 +568,8 @@
 				INFOPLIST_FILE = bR500SampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500SampleTests;
-				PRODUCT_NAME = bR500_and_bR301BLE;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bR500_and_bR301BLE.app/bR500_and_bR301BLE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bR500Sample.app/bR500Sample";
 			};
 			name = Debug;
 		};
@@ -602,8 +580,8 @@
 				INFOPLIST_FILE = bR500SampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500SampleTests;
-				PRODUCT_NAME = bR500_and_bR301BLE;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bR500_and_bR301BLE.app/bR500_and_bR301BLE";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bR500Sample.app/bR500Sample";
 			};
 			name = Release;
 		};
@@ -613,7 +591,7 @@
 				INFOPLIST_FILE = bR500SampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500SampleUITests;
-				PRODUCT_NAME = bR500_and_bR301BLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = bR500Sample;
 				USES_XCTRUNNER = YES;
 			};
@@ -625,7 +603,7 @@
 				INFOPLIST_FILE = bR500SampleUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftsafe.bR500SampleUITests;
-				PRODUCT_NAME = bR500_and_bR301BLE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = bR500Sample;
 				USES_XCTRUNNER = YES;
 			};
@@ -634,7 +612,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		336358891C4F6D0C0029B123 /* Build configuration list for PBXProject "bR500_and_bR301BLE" */ = {
+		336358891C4F6D0C0029B123 /* Build configuration list for PBXProject "bR500Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				336358B91C4F6D0D0029B123 /* Debug */,
@@ -643,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		336358BB1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLE" */ = {
+		336358BB1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500Sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				336358BC1C4F6D0D0029B123 /* Debug */,
@@ -652,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		336358BE1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLETests" */ = {
+		336358BE1C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500SampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				336358BF1C4F6D0D0029B123 /* Debug */,
@@ -661,7 +639,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		336358C11C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500_and_bR301BLEUITests" */ = {
+		336358C11C4F6D0D0029B123 /* Build configuration list for PBXNativeTarget "bR500SampleUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				336358C21C4F6D0D0029B123 /* Debug */,
