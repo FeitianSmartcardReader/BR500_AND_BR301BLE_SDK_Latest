@@ -1,3 +1,5 @@
+2017/9/19
+	Update user manual to 1.7
 2017/8/25
 	Update bR301BLE reader firmware
 2017/8/16
