@@ -118,5 +118,29 @@ public class ft_reader {
 	public void readerClose() {
 		inner_card.cardClose();
 	}
+	
+	public String getManufacture() throws FtBlueReadException{
+		String name = inner_card.getManufacturerName();
+		if(name == null){
+			throw new FtBlueReadException("getManufacture failed");
+		}
+		return name;
+	}
+	public String getModel() throws FtBlueReadException{
+		String name = inner_card.getReaderModle();
+		if(name == null){
+			throw new FtBlueReadException("getModel failed");
+		}
+		return name;
+		
+	}
+	public String getReaderName() throws FtBlueReadException{
+		String name = inner_card.getReaderName();
+		if(name == null){
+			throw new FtBlueReadException("getReaderName failed");
+		}
+		return name;
+		
+	}
 
 }

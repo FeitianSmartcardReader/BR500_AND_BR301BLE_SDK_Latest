@@ -29,6 +29,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,7 +44,6 @@ import com.feitianBLE.readerdk.Tool.DK;
  * This is the main Activity that displays the current chat session.
  */
 public class BlueTooth extends Activity implements OnClickListener {
-	// 宏消息定义
 	private static final boolean Debug = true;
 	private static final String TAG = "Bluetooth";
 	// Key names received from the BluetoothService Handler
@@ -55,7 +55,6 @@ public class BlueTooth extends Activity implements OnClickListener {
 	private final int Max_Packet_length = 2048;
 	
 	private final int Max_Flash_length = 2048;
-	// 控件、
 	private Button mSend;
 	private Button mSend1;
 	private Button mList;
@@ -70,6 +69,10 @@ public class BlueTooth extends Activity implements OnClickListener {
 	private Button BgetHardID;
 	private Button mExit;
 	private Button mclearReceiveData;
+	
+	private Button BgetName;
+	private Button BgetManufacture;
+	private Button BgetModel;
 	
 	private String apdu_stirng;
 	private ArrayAdapter<String> mAdapter1;
@@ -160,6 +163,8 @@ public class BlueTooth extends Activity implements OnClickListener {
 		filter.addAction("android.bluetooth.device.action.ACL_DISCONNECT_REQUESTED");
 		//register receiver
 		registerReceiver(receiver, filter);
+		
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 	}
 
 	private void Init_UI() {
@@ -197,6 +202,15 @@ public class BlueTooth extends Activity implements OnClickListener {
 		BeraseUserID.setOnClickListener(this);
 		seedData = (EditText) findViewById(R.id.ESeedData);
 		seedData.setText("FFFFFFFF");
+		
+		BgetName = (Button)findViewById(R.id.BgetName);
+		BgetName.setOnClickListener(this);
+		BgetModel = (Button)findViewById(R.id.BgetModel);
+		BgetModel.setOnClickListener(this);
+		BgetManufacture = (Button)findViewById(R.id.BgetManufacture);
+		BgetManufacture.setOnClickListener(this);
+
+		
 		
 		BReadFlash = (Button) findViewById(R.id.BReadFlash);
 		BReadFlash.setOnClickListener(this);
@@ -671,6 +685,12 @@ public class BlueTooth extends Activity implements OnClickListener {
 				WriteFlashHelp writeFlashHelp = new WriteFlashHelp(str , offset);
 				new WriteFlash().execute(writeFlashHelp);
 			}
+		}else if (v == BgetName){
+			new GetName().execute();
+		}else if(v == BgetManufacture){
+			new GetManufacture().execute();
+		}else if(v == BgetModel){
+			new GetModel().execute();
 		}
 	}
 
@@ -696,6 +716,11 @@ public class BlueTooth extends Activity implements OnClickListener {
 		BgetUserID.setEnabled(false);
 		BeraseUserID.setEnabled(false);
 		BgenUserID.setEnabled(false);
+		BgetName.setEnabled(false);
+		BgetManufacture.setEnabled(false);
+		BgetModel.setEnabled(false);
+		
+		
 	}
 
 	private void stat_poweron() {
@@ -720,6 +745,9 @@ public class BlueTooth extends Activity implements OnClickListener {
 		BgetUserID.setEnabled(true);
 		BeraseUserID.setEnabled(true);
 		BgenUserID.setEnabled(true);
+		BgetName.setEnabled(true);
+		BgetManufacture.setEnabled(true);
+		BgetModel.setEnabled(true);
 	}
 
 	@Override
@@ -766,7 +794,7 @@ public class BlueTooth extends Activity implements OnClickListener {
 
 	private void displayData(String Tag, String text) {
 		SimpleDateFormat formatter = new SimpleDateFormat("  HH:mm:ss");
-		Date curDate = new Date(System.currentTimeMillis());// 获取当前时间
+		Date curDate = new Date(System.currentTimeMillis());
 		String str = formatter.format(curDate);
 		if (text.length() > 0) {
 			mEditReceive.setText(mEditReceive.getText() + "From:" + Tag + str
@@ -842,7 +870,7 @@ public class BlueTooth extends Activity implements OnClickListener {
 					if (str == null)
 						str = "UnknownDevice";
 					if (!arrayForBlueToothDevice.contains(device)
-							&& (null != str && (-1 != str.indexOf("FT")))) {
+							&& (null != str && ((-1 != str.indexOf("FT")) || (-1 != str.indexOf("Zetes"))))) {
 						mAdapter.add(str);
 						// displayData("mLeScanCallback" , "device.name = " +
 						// str);
@@ -1121,211 +1149,283 @@ public class BlueTooth extends Activity implements OnClickListener {
 
 	}
 	
-		class EraseUserID extends AsyncTask<String, Void, String> {
+	class EraseUserID extends AsyncTask<String, Void, String> {
 
-			protected void onPreExecute() {
-				pdlg.show();
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(String... params) {
+			
+			byte[] tmp = Tool.hexStringToBytes(params[0]);
+			int ret = DK.RETURN_SUCCESS;
+			try {
+				ret = mReader.earseUserID(tmp, tmp.length);
+			} catch (FtBlueReadException e) {
+
+				return e.toString();
 			}
-			@Override
-			protected String doInBackground(String... params) {
+			if (ret == DK.RETURN_SUCCESS) {
+
+				return "Success";
+			} else {
+
+				return "Faile Error " + Integer.toHexString(ret);
+			}
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			if (result.endsWith("Success"))
+			{
+				displayData("erasUserID", "Success");
+			}
+			else
+			{
+				displayData("erasUserID",  result);
+			}
+		}
+
+	}
+	
+	class GetStatus extends AsyncTask<Void, Void, String> {
+
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(Void... params) {
+			int ret = 0;
+			try {
+				ret = mReader.getCardStatus();
+			} catch (FtBlueReadException e) {
+
+				return e.toString();
+			}
+			if (ret == DK.CARD_ABSENT) {
+
+				return "card absent";
+			} else if (ret == DK.CARD_PRESENT) {
 				
-				byte[] tmp = Tool.hexStringToBytes(params[0]);
-				int ret = DK.RETURN_SUCCESS;
-				try {
-					ret = mReader.earseUserID(tmp, tmp.length);
-				} catch (FtBlueReadException e) {
-
-					return e.toString();
-				}
-				if (ret == DK.RETURN_SUCCESS) {
-
-					return "Success";
-				} else {
-
-					return "Faile Error " + Integer.toHexString(ret);
-				}
+				return "card present";
+			} else {
+				return "card unknow";
 			}
-			@Override
-			protected void onPostExecute(String result) {
-				pdlg.hide();
-				if (result.endsWith("Success"))
-				{
-					displayData("erasUserID", "Success");
-				}
-				else
-				{
-					displayData("erasUserID",  result);
-				}
-			}
-
 		}
-		
-		class GetStatus extends AsyncTask<Void, Void, String> {
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			if (result.endsWith("present"))
+			{
+				displayData("GetStatus", result);
+				mPowerOn.setEnabled(true);
+			}
+			else
+			{
+				displayData("GetStatus",  result);
+			}
+		}
+
+	}
+	
+	class GetVersion extends AsyncTask<Void, Void, String> {
+
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(Void... params) {
+			int ret = 0;
+			byte[] recvBuf = new byte[64];
+			int[] recvBufLen = new int[1];
+			try {
+				ret = mReader.getVersion(recvBuf, recvBufLen);
+			} catch (FtBlueReadException e) {
+				//displayData("getVersion", e.toString());
+				return e.toString() + "error";
+			}
+			if (ret == DK.RETURN_SUCCESS) {
+				String verStr = Tool.byte2HexStr(recvBuf, 2);
+				//displayData("getVersion", "V" + verStr.substring(0, 2) + "." + verStr.substring(2, 5));
+				return "V" + verStr.substring(0, 2) + "." + verStr.substring(2, 5);
+			}
+			return "error";
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			if (result.endsWith("error"))
+			{
+				displayData("GetVersion", result);
+			
+			}
+			else
+			{
+				displayData("GetVersion",  result);
+			}
+		}
+
+	}
+	
+	class ReadFlash extends AsyncTask<Integer, Void, String> {
+
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(Integer... params) {
+			byte[] recvBuf = new byte[Max_Flash_length];
+			int ret ;
+			try {
+				ret = mReader.readFlash(recvBuf, params[0], params[1]);
+			} catch (FtBlueReadException e) {
+
+				return e.toString() + "error";
+			}
+			if (ret == DK.RETURN_SUCCESS) {
+
+				return Tool.byte2HexStr(recvBuf, params[1]);
+			} else {
+
+				return "Faile Error " + Integer.toHexString(ret)  + "error";
+			}
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			if (result.endsWith("error"))
+			{
+				displayData("ReadFlash", result);
+			
+			}
+			else
+			{
+				displayData("ReadFlash", "Success");
+				EFlash.setText(result);
+			}
+		}
+
+	}
+	
+	class WriteFlash extends AsyncTask<WriteFlashHelp, Void, String> {
+
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(WriteFlashHelp... params) {
+			byte[] tmp = Tool.hexStringToBytes(params[0].writeString);
+			int ret;
+			try {
+				ret = mReader.writeFlash(tmp, params[0].offset, tmp.length);
+			} catch (FtBlueReadException e) {
+
+				return e.toString();
+			}
+			if (ret == DK.RETURN_SUCCESS) {
+
+				return "Success";
+			} else {
+				
+				return "Faile Error " + Integer.toHexString(ret);
+			}
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			if (result.endsWith("Success"))
+			{
+				displayData("WriteFlash", "Success");
+			
+			}
+			else
+			{
+				displayData("WriteFlash", result);
+			}
+		}
+
+	}
+	class WriteFlashHelp
+	{
+		String writeString;
+		int offset;
+		public WriteFlashHelp( String writeString,  int offset)
+		{
+			this.writeString = writeString;
+			this.offset = offset;
+		};
+	}
+	
+	class GetName extends AsyncTask<Void, Void, String> {
 
 			protected void onPreExecute() {
 				pdlg.show();
 			}
 			@Override
 			protected String doInBackground(Void... params) {
-				int ret = 0;
+				
 				try {
-					ret = mReader.getCardStatus();
+					return mReader.getReaderName();
 				} catch (FtBlueReadException e) {
-
-					return e.toString();
+					return "error";
 				}
-				if (ret == DK.CARD_ABSENT) {
-
-					return "card absent";
-				} else if (ret == DK.CARD_PRESENT) {
-					
-					return "card present";
-				} else {
-					return "card unknow";
-				}
+				
+				
 			}
 			@Override
 			protected void onPostExecute(String result) {
 				pdlg.hide();
-				if (result.endsWith("present"))
-				{
-					displayData("GetStatus", result);
-					mPowerOn.setEnabled(true);
-				}
-				else
-				{
-					displayData("GetStatus",  result);
-				}
+				displayData("GetName",  result);
 			}
 
 		}
-		
-		class GetVersion extends AsyncTask<Void, Void, String> {
 
-			protected void onPreExecute() {
-				pdlg.show();
-			}
-			@Override
-			protected String doInBackground(Void... params) {
-				int ret = 0;
-				byte[] recvBuf = new byte[64];
-				int[] recvBufLen = new int[1];
-				try {
-					ret = mReader.getVersion(recvBuf, recvBufLen);
-				} catch (FtBlueReadException e) {
-					//displayData("getVersion", e.toString());
-					return e.toString() + "error";
-				}
-				if (ret == DK.RETURN_SUCCESS) {
-					String verStr = Tool.byte2HexStr(recvBuf, 2);
-					//displayData("getVersion", "V" + verStr.substring(0, 2) + "." + verStr.substring(2, 5));
-					return "V" + verStr.substring(0, 2) + "." + verStr.substring(2, 5);
-				}
+	class GetManufacture extends AsyncTask<Void, Void, String> {
+
+		protected void onPreExecute() {
+			pdlg.show();
+		}
+		@Override
+		protected String doInBackground(Void... params) {
+			
+			try {
+				return mReader.getManufacture();
+			} catch (FtBlueReadException e) {
 				return "error";
 			}
-			@Override
-			protected void onPostExecute(String result) {
-				pdlg.hide();
-				if (result.endsWith("error"))
-				{
-					displayData("GetVersion", result);
-				
-				}
-				else
-				{
-					displayData("GetVersion",  result);
-				}
-			}
-
+			
+			
 		}
-		
-		class ReadFlash extends AsyncTask<Integer, Void, String> {
-
-			protected void onPreExecute() {
-				pdlg.show();
-			}
-			@Override
-			protected String doInBackground(Integer... params) {
-				byte[] recvBuf = new byte[Max_Flash_length];
-				int ret ;
-				try {
-					ret = mReader.readFlash(recvBuf, params[0], params[1]);
-				} catch (FtBlueReadException e) {
-
-					return e.toString() + "error";
-				}
-				if (ret == DK.RETURN_SUCCESS) {
-
-					return Tool.byte2HexStr(recvBuf, params[1]);
-				} else {
-
-					return "Faile Error " + Integer.toHexString(ret)  + "error";
-				}
-			}
-			@Override
-			protected void onPostExecute(String result) {
-				pdlg.hide();
-				if (result.endsWith("error"))
-				{
-					displayData("ReadFlash", result);
-				
-				}
-				else
-				{
-					displayData("ReadFlash", "Success");
-					EFlash.setText(result);
-				}
-			}
-
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			displayData("GetManufacture",  result);
 		}
-		
-		class WriteFlash extends AsyncTask<WriteFlashHelp, Void, String> {
 
-			protected void onPreExecute() {
-				pdlg.show();
-			}
-			@Override
-			protected String doInBackground(WriteFlashHelp... params) {
-				byte[] tmp = Tool.hexStringToBytes(params[0].writeString);
-				int ret;
-				try {
-					ret = mReader.writeFlash(tmp, params[0].offset, tmp.length);
-				} catch (FtBlueReadException e) {
+	}
+	
+	class GetModel extends AsyncTask<Void, Void, String> {
 
-					return e.toString();
-				}
-				if (ret == DK.RETURN_SUCCESS) {
-
-					return "Success";
-				} else {
-					
-					return "Faile Error " + Integer.toHexString(ret);
-				}
-			}
-			@Override
-			protected void onPostExecute(String result) {
-				pdlg.hide();
-				if (result.endsWith("Success"))
-				{
-					displayData("WriteFlash", "Success");
-				
-				}
-				else
-				{
-					displayData("WriteFlash", result);
-				}
-			}
-
+		protected void onPreExecute() {
+			pdlg.show();
 		}
-		class WriteFlashHelp
-		{
-			String writeString;
-			int offset;
-			public WriteFlashHelp( String writeString,  int offset)
-			{
-				this.writeString = writeString;
-				this.offset = offset;
-			};
+		@Override
+		protected String doInBackground(Void... params) {
+			
+			try {
+				return mReader.getModel();
+			} catch (FtBlueReadException e) {
+				return "error";
+			}
+			
+			
 		}
+		@Override
+		protected void onPostExecute(String result) {
+			pdlg.hide();
+			displayData("GetModel",  result);
+		}
+
+	}
 
 }
