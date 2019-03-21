@@ -1,5 +1,8 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
 
+2019/03/21
+	Update driver file, support new and old reader for both.
+	Upgrade the install manual
 2019/03/20
 	Update driver, add new bR301BLE and bR500 support, which upgraded the bluetooth module, change to new UUID
 	Fix bug when disconnect the reader
