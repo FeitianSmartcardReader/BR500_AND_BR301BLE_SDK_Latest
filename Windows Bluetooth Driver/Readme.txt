@@ -1,5 +1,6 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
-
+2020/3/23
+	Fix big data communication error issue
 2019/03/21
 	Update driver file, support new and old reader for both.
 	Upgrade the install manual
