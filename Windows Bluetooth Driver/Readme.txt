@@ -1,4 +1,7 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
+2020/12/03
+	Fixed bug with PIV card support, which is T1 protocol
+	Improve the stability
 2020/3/23
 	Fix big data communication error issue
 2019/03/21
