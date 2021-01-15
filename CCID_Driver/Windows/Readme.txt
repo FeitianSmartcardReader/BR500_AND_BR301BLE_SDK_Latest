@@ -1,4 +1,7 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
+2021/01/14
+	Improve the card reading speed
+	Optimized card slot detection events
 2020/12/03
 	Fixed bug with PIV card support, which is T1 protocol
 	Improve the stability
