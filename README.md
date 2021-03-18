@@ -1,9 +1,19 @@
 # BR500 and BR301BLE Bluetooth Reader User Manual
 
-Made by: Feitian Technologies
+**Test**
+Download demo application from Appstore:
+https://itunes.apple.com/us/app/smartcard-reader/id525954151?mt=8
 
+Download demo application APK file for Android:
+https://play.google.com/store/apps/details?id=com.ftsafe.pcscdemo&hl=en&gl=US
+https://play.google.com/store/apps/details?id=com.ftsafe.cardreader&hl=en&gl=US
+
+**Manual**
+User manual and Developer manual:
+http://www.pcscreader.com/docs/getting_started.html
+
+**Source code:**
 PC demo code: https://github.com/FeitianSmartcardReader/R301/tree/master/Demo
-
 Mobile demo code: https://github.com/FeitianSmartcardReader/FEITIAN_MOBILE_READERS
 
 ## 1.0 GENERAL INFORMATION
