@@ -1,4 +1,6 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
+2021/04/22
+	Released V5 version, and now you can using 2 BLE reader with latest driver at the same time.
 2021/01/14
 	Improve the card reading speed
 	Optimized card slot detection events
