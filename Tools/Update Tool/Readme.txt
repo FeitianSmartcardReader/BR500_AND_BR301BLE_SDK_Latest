@@ -11,7 +11,7 @@ For bR301 BLE and bR500 using same update tool, the different is firmware name.
       - when detect the card, the green light turn on, remove card will turn off, if there have communication, the green light flashing
       - battery charging the red light will trun on, after the full charging, the red light turn off
 
-Please notice, you can updat the old reader bR301FC4 to new firmware, because the new firmware is compitable with old hardware(bR301FC4) and new hardware(bR301FC6), you cannot update the old firmware to new hardware, it may has issues.
+Please notice, you cannot update bR301FC4 to new firmware, because it has compatible issue.
 
 2017/8/25 When connected to charger, it works do pair at first time, the second time has issue, App cannot found reader, this issue already solved in 1.11 version, it is beta version.
 2017/3/14 Update firmware to 1.10, fix issue when using Feitian Bluetooth CCID driver, the behave is read card data error and give 40FE error.
