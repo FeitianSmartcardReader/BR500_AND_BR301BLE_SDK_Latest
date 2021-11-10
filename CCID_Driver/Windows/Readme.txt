@@ -1,4 +1,8 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
+
+2021/11/10
+	solved big data errors. When sending large data, the driver will return an error.
+	Support 2 BLE reader at same time
 2021/04/22
 	Released V5 version, and now you can using 2 BLE reader with latest driver at the same time.
 2021/01/14
