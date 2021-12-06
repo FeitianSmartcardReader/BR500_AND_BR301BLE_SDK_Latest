@@ -1,5 +1,10 @@
 *Please confirm your bluetooth module on your PC support BLE Technology
 
+2021/12/06
+	1. Fixed bugs in Windows x86.
+	2. Optimize the code by including and removing debugging information.
+	3. BLE_CCID_Driver_1_Reader.exe-this driver supports 1 BLE reader only at the same time.
+	BLE_CCID_Driver_2_Reader.exe-this driver supports 2 BLE reader only at the same time.
 2021/11/10
 	solved big data errors. When sending large data, the driver will return an error.
 	Support 2 BLE reader at same time
