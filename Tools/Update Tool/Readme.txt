@@ -1,5 +1,11 @@
 For bR301 BLE and bR500 using same update tool, the different is firmware name.
 
+2023/10/25
+  Update the bR301BLE firmware to 2.25, here are some details:
+  1. Support enable/disable auto power off feature.
+  2. Support obtain the battery remaining capacity.
+  3. Communication speed improvement.
+
 2019/10/10
   Update the bR301BLE firmware to 2.20, which support new hardware bR301FC6, few changes for the new version:
   1. It adds battery service on Bluetooth boardcast, you can get the battery level easily through this service.
