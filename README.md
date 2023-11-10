@@ -912,7 +912,7 @@ The related files of update application
 
 1. Update_Tool.exe is execute file
 
-2. *. meta file is firmware BIN file, please don’t rename this file
+2. *. meta file is firmware binary file, please don’t rename this file. And please note: **Keep only one .meta file in the same folder with Update_Tool.exe**
    
    ![](https://raw.githubusercontent.com/FeitianSmartcardReader/use_to_store_images/master/2020/05/33addba91875690095f145c0712c3f69b97ed2ce.png)
 
